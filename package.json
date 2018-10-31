@@ -1,0 +1,17 @@
+{
+    "name": "mapping-video-creator",
+    "version": "1.0.0",
+    "description": "A mapping video creator for mappers",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron ."
+    },
+    "repository": "https://github.com/electron/electron-quick-start",
+    "keywords": ["Electron", "quick", "start", "tutorial", "demo"],
+    "author": "GitHub",
+    "license": "MIT",
+    "devDependencies": {
+        "electron": "^3.0.6",
+        "electron-reload": "^1.2.5"
+    }
+}
