@@ -25,33 +25,40 @@ function createWindow() {
                 {
                     label: "New",
                     click() {},
-                    accelerator: "CmdOrCtrl+N"
+                    accelerator: "CmdOrCtrl+N",
+                    icon: "assets/icons/New.png"
                 },
                 {
                     label: "Open",
                     click() {},
-                    accelerator: "CmdOrCtrl+O"
+                    accelerator: "CmdOrCtrl+O",
+                    icon: "assets/icons/Open.png"
                 },
                 { type: "separator" },
                 {
                     label: "Save",
                     click() {},
-                    accelerator: "CmdOrCtrl+S"
+                    accelerator: "CmdOrCtrl+S",
+                    icon: "assets/icons/Save.png"
                 },
                 {
                     label: "Save As",
                     click() {},
-                    accelerator: "CmdOrCtrl+Shift+S"
+                    accelerator: "CmdOrCtrl+Shift+S",
+                    icon: "assets/icons/Save As.png"
                 },
                 { type: "separator" },
                 {
                     label: "Print",
                     click() {},
-                    accelerator: "CmdOrCtrl+P"
+                    accelerator: "CmdOrCtrl+P",
+                    icon: "assets/icons/Print.png"
                 },
                 { type: "separator" },
                 {
-                    role: "quit"
+                    role: "quit",
+                    accelerator: "CmdOrCtrl+Q",
+                    icon: "assets/icons/Exit.png"
                 }
             ]
         },
@@ -60,28 +67,34 @@ function createWindow() {
             submenu: [
                 {
                     role: "undo",
-                    accelerator: "CmdOrCtrl+Z"
+                    accelerator: "CmdOrCtrl+Z",
+                    icon: "assets/icons/Undo.png"
                 },
                 {
                     role: "redo",
-                    accelerator: "CmdOrCtrl+Y"
+                    accelerator: "CmdOrCtrl+Y",
+                    icon: "assets/icons/Redo.png"
                 },
                 { type: "separator" },
                 {
                     role: "cut",
-                    accelerator: "CmdOrCtrl+X"
+                    accelerator: "CmdOrCtrl+X",
+                    icon: "assets/icons/Cut.png"
                 },
                 {
                     role: "copy",
-                    accelerator: "CmdOrCtrl+C"
+                    accelerator: "CmdOrCtrl+C",
+                    icon: "assets/icons/Copy.png"
                 },
                 {
                     role: "paste",
-                    accelerator: "CmdOrCtrl+V"
+                    accelerator: "CmdOrCtrl+V",
+                    icon: "assets/icons/Paste.png"
                 },
                 {
                     role: "delete",
-                    accelerator: "Delete"
+                    accelerator: "Delete",
+                    icon: "assets/icons/Delete.png"
                 },
                 { type: "separator" },
                 {
@@ -95,16 +108,19 @@ function createWindow() {
             submenu: [
                 {
                     role: "zoomin",
-                    accelerator: "CmdOrCtrl+="
+                    accelerator: "CmdOrCtrl+=",
+                    icon: "assets/icons/Zoom In.png"
                 },
                 {
                     role: "zoomout",
-                    accelerator: "CmdOrCtrl+-"
+                    accelerator: "CmdOrCtrl+-",
+                    icon: "assets/icons/Zoom Out.png"
                 },
                 {
                     label: "Reset Zoom",
                     role: "resetzoom",
-                    accelerator: "CmdOrCtrl+0"
+                    accelerator: "CmdOrCtrl+0",
+                    icon: "assets/icons/Reset Zoom.png"
                 }
             ]
         }
