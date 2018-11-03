@@ -7,11 +7,19 @@
         "start": "electron ."
     },
     "repository": "https://github.com/Spaghet-Ti/Mapping-Video-Creator",
-    "keywords": ["Mapping Video Creator", "Mapping", "Mappers"],
+    "keywords": [
+        "Mapping Video Creator",
+        "Mapping",
+        "Mappers"
+    ],
     "author": "Andrew Xu",
     "license": "MIT",
     "devDependencies": {
         "electron": "^3.0.6",
         "electron-reload": "^1.2.5"
+    },
+    "dependencies": {
+        "jquery": "^3.3.1",
+        "react": "^16.6.0"
     }
 }
