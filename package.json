@@ -2,10 +2,7 @@
     "name": "mapping-video-creator",
     "version": "1.0.0",
     "description": "A mapping video creator for mappers",
-    "main": "main.js",
-    "scripts": {
-        "start": "electron ."
-    },
+    "main": "public/electron.js",
     "repository": "https://github.com/Spaghet-Ti/Mapping-Video-Creator",
     "keywords": [
         "Mapping Video Creator",
@@ -15,11 +12,33 @@
     "author": "Andrew Xu",
     "license": "MIT",
     "devDependencies": {
-        "electron": "^3.0.6",
+        "electron": "^3.0.7",
+        "electron-builder": "^20.31.2",
         "electron-reload": "^1.2.5"
     },
     "dependencies": {
-        "jquery": "^3.3.1",
-        "react": "^16.6.0"
-    }
+        "concurrently": "^4.0.1",
+        "cross-env": "^5.2.0",
+        "electron-is-dev": "^1.0.1",
+        "react": "^16.6.0",
+        "react-dom": "^16.6.0",
+        "react-scripts": "2.1.1",
+        "wait-on": "^3.1.0"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "electron-dev": "concurrently \"cross-env BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\""
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ]
 }

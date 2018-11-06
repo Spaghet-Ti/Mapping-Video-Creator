@@ -3,20 +3,27 @@
 // Modules to control application life and create native browser window
 const { app, BrowserWindow, Menu } = require("electron");
 
+const path = require("path");
+const url = require("url");
+const isDev = require("electron-is-dev");
+
 require("electron-reload")(__dirname);
 
 // Keep a global reference of the window object, if you don"t, the window will
 // be closed automatically when the JavaScript object is garbage collected.
-let win;
+let mainWindow;
 
 function createWindow() {
     // Create the browser window.
-    win = new BrowserWindow({ show: false, backgroundColor: "#CCCCCC" });
-    win.maximize();
-    win.show();
+    mainWindow = new BrowserWindow({ show: false, backgroundColor: "#CCCCCC" });
+    mainWindow.maximize();
+    mainWindow.show();
 
-    // and load the index.html of the app.
-    win.loadFile("index.html");
+    mainWindow.loadURL(
+        isDev
+            ? "http://localhost:3000"
+            : `file://${path.join(__dirname, "../build/index.html")}`
+    );
 
     var menu = Menu.buildFromTemplate([
         {
@@ -26,39 +33,39 @@ function createWindow() {
                     label: "New",
                     click() {},
                     accelerator: "CmdOrCtrl+N",
-                    icon: "assets/icons/New.png"
+                    icon: "././src/assets/icons/New.png"
                 },
                 {
                     label: "Open",
                     click() {},
                     accelerator: "CmdOrCtrl+O",
-                    icon: "assets/icons/Open.png"
+                    icon: "././src/assets/icons/Open.png"
                 },
                 { type: "separator" },
                 {
                     label: "Save",
                     click() {},
                     accelerator: "CmdOrCtrl+S",
-                    icon: "assets/icons/Save.png"
+                    icon: "././src/assets/icons/Save.png"
                 },
                 {
                     label: "Save As",
                     click() {},
                     accelerator: "CmdOrCtrl+Shift+S",
-                    icon: "assets/icons/Save As.png"
+                    icon: "././src/assets/icons/Save As.png"
                 },
                 { type: "separator" },
                 {
                     label: "Print",
                     click() {},
                     accelerator: "CmdOrCtrl+P",
-                    icon: "assets/icons/Print.png"
+                    icon: "././src/assets/icons/Print.png"
                 },
                 { type: "separator" },
                 {
                     role: "quit",
                     accelerator: "CmdOrCtrl+Q",
-                    icon: "assets/icons/Exit.png"
+                    icon: "././src/assets/icons/Exit.png"
                 }
             ]
         },
@@ -68,33 +75,33 @@ function createWindow() {
                 {
                     role: "undo",
                     accelerator: "CmdOrCtrl+Z",
-                    icon: "assets/icons/Undo.png"
+                    icon: "././src/assets/icons/Undo.png"
                 },
                 {
                     role: "redo",
                     accelerator: "CmdOrCtrl+Y",
-                    icon: "assets/icons/Redo.png"
+                    icon: "././src/assets/icons/Redo.png"
                 },
                 { type: "separator" },
                 {
                     role: "cut",
                     accelerator: "CmdOrCtrl+X",
-                    icon: "assets/icons/Cut.png"
+                    icon: "././src/assets/icons/Cut.png"
                 },
                 {
                     role: "copy",
                     accelerator: "CmdOrCtrl+C",
-                    icon: "assets/icons/Copy.png"
+                    icon: "././src/assets/icons/Copy.png"
                 },
                 {
                     role: "paste",
                     accelerator: "CmdOrCtrl+V",
-                    icon: "assets/icons/Paste.png"
+                    icon: "././src/assets/icons/Paste.png"
                 },
                 {
                     role: "delete",
                     accelerator: "Delete",
-                    icon: "assets/icons/Delete.png"
+                    icon: "././src/assets/icons/Delete.png"
                 },
                 { type: "separator" },
                 {
@@ -109,18 +116,18 @@ function createWindow() {
                 {
                     role: "zoomin",
                     accelerator: "CmdOrCtrl+=",
-                    icon: "assets/icons/Zoom In.png"
+                    icon: "././src/assets/icons/Zoom In.png"
                 },
                 {
                     role: "zoomout",
                     accelerator: "CmdOrCtrl+-",
-                    icon: "assets/icons/Zoom Out.png"
+                    icon: "././src/assets/icons/Zoom Out.png"
                 },
                 {
                     label: "Reset Zoom",
                     role: "resetzoom",
                     accelerator: "CmdOrCtrl+0",
-                    icon: "assets/icons/Reset Zoom.png"
+                    icon: "././src/assets/icons/Reset Zoom.png"
                 }
             ]
         }
@@ -128,14 +135,14 @@ function createWindow() {
     Menu.setApplicationMenu(menu);
 
     // Open the DevTools.
-    win.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
 
     // Emitted when the window is closed.
-    win.on("closed", function() {
+    mainWindow.on("closed", function() {
         // Dereference the window object, usually you would store windows
         // in an array if your app supports multi windows, this is the time
         // when you should delete the corresponding element.
-        win = null;
+        mainWindow = null;
     });
 }
 
@@ -156,7 +163,7 @@ app.on("window-all-closed", function() {
 app.on("activate", function() {
     // On OS X it"s common to re-create a window in the app when the
     // dock icon is clicked and there are no other windows open.
-    if (win === null) {
+    if (mainWindow === null) {
         createWindow();
     }
 });

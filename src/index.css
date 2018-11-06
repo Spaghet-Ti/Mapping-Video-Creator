@@ -1,0 +1,14 @@
+body {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: Georgia, "Segoe UI", Helvetica, Arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: Consolas, source-code-pro, Menlo, Monaco, "Courier New",
+        monospace;
+}
