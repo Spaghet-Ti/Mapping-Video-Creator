@@ -1,1 +1,19 @@
+#app {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
 
+.box {
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+#app div {
+    height: 100%;
+}
+
+#app > div > div > div {
+    background-color: #ffffff;
+}
