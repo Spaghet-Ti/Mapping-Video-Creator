@@ -33,39 +33,39 @@ function createWindow() {
                     label: "New",
                     click() {},
                     accelerator: "CmdOrCtrl+N",
-                    icon: "././src/assets/icons/New.png"
+                    icon: "././src/assets/icons/menu/New.png"
                 },
                 {
                     label: "Open",
                     click() {},
                     accelerator: "CmdOrCtrl+O",
-                    icon: "././src/assets/icons/Open.png"
+                    icon: "././src/assets/icons/menu/Open.png"
                 },
                 { type: "separator" },
                 {
                     label: "Save",
                     click() {},
                     accelerator: "CmdOrCtrl+S",
-                    icon: "././src/assets/icons/Save.png"
+                    icon: "././src/assets/icons/menu/Save.png"
                 },
                 {
                     label: "Save As",
                     click() {},
                     accelerator: "CmdOrCtrl+Shift+S",
-                    icon: "././src/assets/icons/Save As.png"
+                    icon: "././src/assets/icons/menu/Save As.png"
                 },
                 { type: "separator" },
                 {
                     label: "Print",
                     click() {},
                     accelerator: "CmdOrCtrl+P",
-                    icon: "././src/assets/icons/Print.png"
+                    icon: "././src/assets/icons/menu/Print.png"
                 },
                 { type: "separator" },
                 {
                     role: "quit",
                     accelerator: "CmdOrCtrl+Q",
-                    icon: "././src/assets/icons/Exit.png"
+                    icon: "././src/assets/icons/menu/Exit.png"
                 }
             ]
         },
@@ -75,33 +75,33 @@ function createWindow() {
                 {
                     role: "undo",
                     accelerator: "CmdOrCtrl+Z",
-                    icon: "././src/assets/icons/Undo.png"
+                    icon: "././src/assets/icons/menu/Undo.png"
                 },
                 {
                     role: "redo",
                     accelerator: "CmdOrCtrl+Y",
-                    icon: "././src/assets/icons/Redo.png"
+                    icon: "././src/assets/icons/menu/Redo.png"
                 },
                 { type: "separator" },
                 {
                     role: "cut",
                     accelerator: "CmdOrCtrl+X",
-                    icon: "././src/assets/icons/Cut.png"
+                    icon: "././src/assets/icons/menu/Cut.png"
                 },
                 {
                     role: "copy",
                     accelerator: "CmdOrCtrl+C",
-                    icon: "././src/assets/icons/Copy.png"
+                    icon: "././src/assets/icons/menu/Copy.png"
                 },
                 {
                     role: "paste",
                     accelerator: "CmdOrCtrl+V",
-                    icon: "././src/assets/icons/Paste.png"
+                    icon: "././src/assets/icons/menu/Paste.png"
                 },
                 {
                     role: "delete",
                     accelerator: "Delete",
-                    icon: "././src/assets/icons/Delete.png"
+                    icon: "././src/assets/icons/menu/Delete.png"
                 },
                 { type: "separator" },
                 {
@@ -116,18 +116,18 @@ function createWindow() {
                 {
                     role: "zoomin",
                     accelerator: "CmdOrCtrl+=",
-                    icon: "././src/assets/icons/Zoom In.png"
+                    icon: "././src/assets/icons/menu/Zoom In.png"
                 },
                 {
                     role: "zoomout",
                     accelerator: "CmdOrCtrl+-",
-                    icon: "././src/assets/icons/Zoom Out.png"
+                    icon: "././src/assets/icons/menu/Zoom Out.png"
                 },
                 {
                     label: "Reset Zoom",
                     role: "resetzoom",
                     accelerator: "CmdOrCtrl+0",
-                    icon: "././src/assets/icons/Reset Zoom.png"
+                    icon: "././src/assets/icons/menu/Reset Zoom.png"
                 }
             ]
         }
